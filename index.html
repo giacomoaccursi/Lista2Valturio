@@ -33,10 +33,11 @@
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    margin: 25% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 10px solid #ffffff;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 90%; /* Could be more or less, depending on screen size */
     border-radius: 2em;
+
   }
 
   .prog{
@@ -51,11 +52,14 @@
     animation: animatezoom 0.6s
   }
 
-  .title{
-    font-size:3.2em; 
+  #title{
+    font-size:1.8em; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
+  li{
+    font-size: 1.2em;
+  }
   @-webkit-keyframes animatezoom {
     from {-webkit-transform: scale(0)} 
     to {-webkit-transform: scale(1)}
@@ -65,15 +69,38 @@
     from {transform: scale(0)} 
     to {transform: scale(1)}
   }
+
+  @media (min-width:641px){
+    .modal-content {
+
+      margin: 10% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+ 
+      width: 30%; /* Could be more or less, depending on screen size */
+      
+    }
+
+    li{
+      font-size: 2em; 
+    }
+
+    #title{
+      font-size:3em; 
+    }
+
+    .cards{
+      margin-top: 110px;
+    }
+
+  }
   
   </style>
 </head>
 <body>
-  <h1 class="title align-center mt-4 text-center">Lista 2 Valturio</h1>
-    <div class="container">
+  <h1 class="align-center mt-4 text-center"><span id="title"> Lista 2 Valturio</span></h1>
+    <div class="container cards">
     <div class="card-group">
         <!-- Card -->
-        <div class="card d-flex p-3 border-0">
+        <div class="card d-flex p-3 mb-lg-4 border-0">
           <div class="card-body align-items-center d-flex justify-content-center bg-primary " style="border-radius: 2em; height:180px" onclick="document.getElementById('merchandising').style.display='block'">            <!-- Title -->
             <div class="col-md-12 text-center prog" >
               Merchandising 
@@ -83,7 +110,7 @@
         <!-- Card -->
 
         <!-- Card -->
-        <div class="card d-flex p-3 border-0">
+        <div class="card d-flex p-3 mb-lg-4 border-0">
           <div class="card-body align-items-center d-flex justify-content-center bg-secondary " style="border-radius: 2em; height:180px" onclick="document.getElementById('feste').style.display='block'">            <!-- Title -->
             <div class="col-md-12 text-center prog" >
               Feste 
@@ -93,7 +120,7 @@
         <!-- Card -->
 
         <!-- Card -->
-        <div class="card d-flex p-3 border-0">
+        <div class="card d-flex p-3 mb-lg-4 border-0">
           <div class="card-body align-items-center d-flex justify-content-center bg-success " style="border-radius: 2em; height:180px" onclick="document.getElementById('progetti').style.display='block'">            <!-- Title -->
             <div class="col-md-12 text-center prog" >
               Progetti 
@@ -217,7 +244,7 @@
       <div class="container rounded-10" style="background-color:#ffffff">
 
         <ul>
-          <li>Cena con catering interna alla scouola</li>
+          <li>Cena con catering interna alla scuola</li>
           <li>100 giorni</li>
           <li>Formazione universitaria</li>
           <li>Spiegazione del mondo universitario</li>
